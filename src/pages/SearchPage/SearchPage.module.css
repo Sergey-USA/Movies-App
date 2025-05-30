@@ -1,0 +1,34 @@
+.searchContainer {
+    background-color: gray;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.searchBox {
+    padding: 20px 0px 0px 50px;
+}
+
+.searchInput {
+    padding: 10px;
+    width: 90vw;
+    height: 50px;
+    color: white;
+    font-size: 25px;
+    background-color: lightgray;
+    border-radius: 8px;
+    border: 2px solid white ;
+    background: transparent;
+}
+
+.searchInput::placeholder {
+    color: white;
+    opacity: 1;
+  }
+
+ .searchInput:focus {
+    outline: none; 
+    border: 3px solid white ;
+}

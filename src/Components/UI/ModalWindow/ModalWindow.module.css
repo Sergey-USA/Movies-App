@@ -1,0 +1,22 @@
+.modalWindow {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 165, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+}
+
+.modalContainer {
+    padding: 30px;
+    min-height: 30vh;
+    min-width: 30vw;
+    border-radius: 8px;
+    border: 2px solid white;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+}

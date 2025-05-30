@@ -1,0 +1,16 @@
+.AISearchBtn {
+  background: transparent;
+  border: none;
+  margin-right: 50px;
+  padding-top: 20px;
+}
+
+.AISearchIcon {
+  width: 36px;
+  height: 36px;
+  color: white; 
+}
+
+.AISearchIcon:hover {
+  color: black;
+}

@@ -1,0 +1,30 @@
+.movieListTitle {
+    color: white;
+    padding: 20px 20px 0px 20px;
+}
+
+.movieList {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 50px 0px 50px;
+    
+    scrollbar-width: none; 
+   
+}
+
+.movieList::-webkit-scrollbar { 
+    display: none;
+}
+
+.movieList::-webkit-scrollbar {
+    height: 5px; 
+    color: BLACK;
+}
+
+.movieList::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 8px;
+}
+

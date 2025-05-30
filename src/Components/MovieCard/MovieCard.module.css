@@ -1,0 +1,20 @@
+.movieImage {
+    border-radius: 8px;
+    border: 2px solid white;
+}
+
+.movieCard {
+    color: white;
+    width: 205px;
+    min-width: 200px;
+}
+
+.movieTitle {
+    word-break: break-word; 
+    white-space: normal; 
+}
+
+.movieImage:hover {
+    border-radius: 8px;
+    border: 2px solid black;
+}

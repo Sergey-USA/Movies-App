@@ -1,0 +1,14 @@
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.searchBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+ 
+}
+

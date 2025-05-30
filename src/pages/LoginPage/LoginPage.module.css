@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.loginPage {
+    margin-top: 5vh;
+    background-color: brown;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.loginInput {
+    border: 2px solid rgba(165, 42, 42, 0.606);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.loginBtn {
+    background-color: white;
+    border: 2px solid rgba(165, 42, 42, 0.606);
+    border-radius: 5px;
+    padding: 5px;
+}
+

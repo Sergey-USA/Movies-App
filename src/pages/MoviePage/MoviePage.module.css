@@ -1,0 +1,104 @@
+.movieContainer {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.movieCard {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    transition: all 0.3s ease;
+    padding: 20px;
+    gap: 20px; 
+}
+
+.movieImage {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    max-width: 100%;
+}
+
+.movieTextCard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 15px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.movieTitle {
+    white-space: nowrap;
+    font-size: 3vw;
+}
+
+.movieText {
+    font-size: 1.5rem;
+}
+
+.movieTextButtons{
+    margin-top: 100px;
+}
+
+.favBtn {
+    color: #ffffff;
+    border: 0px none #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: rgba(128, 128, 128, 0.839);
+}
+
+.favBtn:hover {
+    color: black;
+    background-color: white;
+}
+
+@media (max-width: 1024px) {
+    .movieCard {
+        padding: 15px;
+    }
+    .movieImage {
+        width: 160px;
+    }
+    .movieText {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .movieCard {
+        padding: 10px;
+    }
+    .movieImage {
+        width: 140px;
+    }
+    .movieText {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .movieCard {
+        padding: 8px;
+    }
+    .movieImage {
+        width: 120px;
+    }
+    .movieText {
+        font-size: 1rem;
+    }
+}
+
+

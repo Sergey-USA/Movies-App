@@ -1,0 +1,16 @@
+.filterhBtn {
+    background: transparent;
+    border: none;
+    margin-right: 50px;
+    padding-top: 20px;
+  }
+  
+  .filterIcon {
+    width: 36px;
+    height: 36px;
+    color: white; 
+  }
+
+  .filterIcon:hover {
+    color: black;
+  }

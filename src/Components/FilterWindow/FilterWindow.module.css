@@ -1,0 +1,20 @@
+.filterInput {
+    border-radius: 8px;
+    border: 2px solid white;
+    color:black;
+    padding: 5px;
+  }
+
+  .filterBtn {
+    background-color: lightslategray;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    font-weight: 700;
+  }
+
+  .filterBtn:hover {
+    background-color: white;
+    color: black;
+ }

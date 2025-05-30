@@ -1,0 +1,48 @@
+.searchContainer {
+    align-items: center;
+    background-color: gray;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.formWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formContainer {
+    margin-top: 30px;
+    padding: 30px;
+    min-height: 30vh;
+    min-width: 30vw;
+    border-radius: 8px;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+}
+
+.AIInput {
+    border-radius: 8px;
+    border: 2px solid white;
+    color:black;
+    padding: 5px;
+  }
+
+  .AIBtn {
+    background-color: lightslategray;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    font-weight: 700;
+  }
+
+  .AIBtn:hover {
+    background-color: white;
+    color: black;
+ }
