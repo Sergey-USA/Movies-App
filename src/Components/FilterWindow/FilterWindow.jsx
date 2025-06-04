@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import ModalWindow from '../UI/ModalWindow/ModalWindow';
-import MyInput from '../UI/MyInput/MyInput';
+import ModalWindow from '../ui/modalWindow/ModalWindow';
+import MyInput from '../ui/myInput/MyInput';
 import styles from "./FilterWindow.module.css"
 import { useGetGenresQuery } from '../../api/moviesApi';
-import MyButton from '../UI/MyButton/MyButton';
+import MyButton from '../ui/myButton/MyButton';
 import { useNavigate } from 'react-router';
 
 export default function FilterWindow({setIsModal}) {

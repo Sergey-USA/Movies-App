@@ -1,5 +1,5 @@
 import styles from "./FilteredPage.module.css"
-import MovieList from "../../Components/MovieList/MovieList"
+import MovieList from "../../components/movieList/MovieList"
 import { useSearchParams } from 'react-router';
 import { useGetMovieByFilterQuery } from '../../api/moviesApi';
 import { useSelector } from 'react-redux';

@@ -1,7 +1,7 @@
 import { useParams } from "react-router";
 import { useGetMovieByIdQuery } from "../../api/moviesApi";
 import styles from "./MoviePage.module.css";
-import MyButton from "../../Components/UI/MyButton/MyButton";
+import MyButton from "../../components/ui/myButton/MyButton";
 import { useDispatch } from "react-redux";
 import { addFavorites } from "../../Features/Favorites/favoritesSlice";
 

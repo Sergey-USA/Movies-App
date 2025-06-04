@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useGetMovieByNameQuery} from "../../api/moviesApi";
-import MyInput from "../../Components/UI/MyInput/MyInput";
+import MyInput from "../../components/ui/myInput/MyInput";
 import styles from "./searchPage.module.css";
-import MovieList from "../../Components/MovieList/MovieList";
+import MovieList from "../../components/movieList/MovieList";
 import { useSelector } from "react-redux";
 
 function SearchPage () {

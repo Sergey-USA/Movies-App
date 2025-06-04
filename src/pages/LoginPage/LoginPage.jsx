@@ -1,8 +1,8 @@
  import { useDispatch } from "react-redux";
 import styles from "./LoginPage.module.css"
 import { login } from "../../Features/Auth/authSlice";
-import MyInput from "../../Components/UI/MyInput/MyInput";
-import MyButton from "../../Components/UI/MyButton/MyButton";
+import MyInput from "../../components/ui/myInput/MyInput";
+import MyButton from "../../components/ui/myButton/MyButton";
 
 function LoginPage () {
     const dispatch = useDispatch();

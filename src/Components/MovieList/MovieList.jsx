@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import MovieCard from '../MovieCard/MovieCard'
+import MovieCard from '../movieCard/MovieCard'
 import styles from "./MovieList.module.css"
 
 

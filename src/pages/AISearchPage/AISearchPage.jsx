@@ -1,11 +1,12 @@
 import { useSelector } from "react-redux";
 import styles from "./AISearchPage.module.css"
 import { useState } from "react";
-import { useAIApi } from "../../api/useAIApi";
-import MyInput from "../../Components/UI/MyInput/MyInput";
-import MyButton from "../../Components/UI/MyButton/MyButton";
-import { useGetMovieByNameQuery } from "../../api/moviesApi";
-import MovieList from "../../Components/MovieList/MovieList";
+import { useAIApi } from "@api/useAIApi";
+import MyInput from "@components/ui/myInput/MyInput";
+
+import MyButton from "@ui/myButton/MyButton";
+import { useGetMovieByNameQuery } from "@api/moviesApi";
+import MovieList from "@components/movieList/MovieList";
 
 export default function AISearchPage() {
 

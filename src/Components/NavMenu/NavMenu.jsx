@@ -1,5 +1,5 @@
 import { NavLink } from "react-router";
-import MyButton from "../UI/MyButton/MyButton";
+import MyButton from "../ui/myButton/MyButton";
 import styles from "./NavMenu.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../Features/Auth/authSlice";

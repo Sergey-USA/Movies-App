@@ -3,10 +3,11 @@ import { Route, Routes } from 'react-router'
 import './App.css'
 import { privateRoutes, publicRoutes } from './routes'
 import { useSelector } from 'react-redux'
-import NavMenu from './Components/NavMenu/NavMenu'
+import NavMenu from './components/navMenu/NavMenu'
 
 function App() {
   const isAuth = useSelector((state)=>state.auth.isAuth)
+
 
   return (
     <div className='App'>
