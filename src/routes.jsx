@@ -1,13 +1,13 @@
-import AboutPage from "./pages/aboutPage/AboutPage";
-import AISearchPage from "./pages/aISearchPage/AISearchPage";
-import ErrorPage from "./pages/errorPage/ErrorPage";
-import FavoritesPage from "./pages/favoritesPage/FavoritesPage";
-import FilteredPage from "./pages/filteredPage/filteredPage";
-import Home from "./pages/homePage/Home";
-import LoginPage from "./pages/loginPage/LoginPage";
-import MoviePage from "./pages/moviePage/MoviePage";
-import SearchPage from "./pages/searchPage/SearchPage";
-import Search from "./pages/searchPage/SearchPage";
+import AboutPage from "@pages/aboutPage/AboutPage";
+import AISearchPage from "@pages/aISearchPage/AISearchPage";
+import ErrorPage from "@pages/errorPage/ErrorPage";
+import FavoritesPage from "@pages/favoritesPage/FavoritesPage";
+import FilteredPage from "@pages/filteredPage/filteredPage";
+import Home from "@pages/homePage/Home";
+import LoginPage from "@pages/loginPage/LoginPage";
+import MoviePage from "@pages/moviePage/MoviePage";
+import SearchPage from "@pages/searchPage/SearchPage";
+import Search from "@pages/searchPage/SearchPage";
 
 export const privateRoutes = [
     {path: "/", element: <Home/>},

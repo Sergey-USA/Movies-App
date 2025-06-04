@@ -23,20 +23,15 @@ const {data: searchedMovies, isLoading: moviesLoading} = useGetMovieByNameQuery(
 
 
 const submitBtn = async () => {
-    console.log("Кнопка нажалась функция выполняется")
+  
     setMovies(null);
     try {
         const aiMovie = await fetchMovieName(apiKey, userQuery);
         setMovies(aiMovie);
-        console.log(aiMovie)
-    } catch (err) {console.log(err)}
+    
+    } catch (err) {alert(err)}
 
 }
-
-// const submitBtn = async () => {
-//     const aiMovie = "The Matrix";
-//     setMovies(aiMovie)
-// }
 
 
   return (
@@ -56,6 +51,7 @@ const submitBtn = async () => {
                     <MyButton 
                         className = {styles.AIBtn}
                         onClick={(submitBtn)}
+                        disabled={!apiKey.trim() || !userQuery.trim()}
                     >Искать</MyButton>
             </div>
         </div>

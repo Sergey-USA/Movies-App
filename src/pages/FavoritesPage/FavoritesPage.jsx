@@ -1,5 +1,5 @@
 import styles from "./FavoritesPage.module.css"
-import MovieList from '../../components/movieList/MovieList';
+import MovieList from '@components/movieList/MovieList';
 import { useSelector } from 'react-redux';
 
 export default function FavoritesPage() {

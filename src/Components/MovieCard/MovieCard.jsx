@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 import styles from "./MovieCard.module.css"
 import { useDispatch } from "react-redux";
-import { setBgrImg } from "../../Features/Background/bgrImgSlice";
+import { setBgrImg } from "@features/Background/bgrImgSlice";
 
 function MovieCard ({movie}) {
     let navigate = useNavigate();

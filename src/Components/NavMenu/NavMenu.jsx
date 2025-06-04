@@ -2,11 +2,20 @@ import { NavLink } from "react-router";
 import MyButton from "../ui/myButton/MyButton";
 import styles from "./NavMenu.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { logout } from "../../Features/Auth/authSlice";
+import { logout } from "@features/Auth/authSlice";
+import { useEffect, useState } from "react";
 
 function NavMenu () {
     const isAuth = useSelector((state)=>state.auth.isAuth)
+    const favorites = useSelector((state) => state.favorites);
     const dispatch = useDispatch();
+
+    const [animation, setAnimation] = useState(false);
+
+    useEffect(()=>{
+        setAnimation(true);
+        setTimeout(() => setAnimation(false), 500);
+    },[favorites])
     
     return (
         <nav className={styles.navMenu}>
@@ -43,7 +52,7 @@ function NavMenu () {
                 to = "/about"
                 end
                 className={({ isActive }) =>
-                    isActive ? styles.activeLink : styles.inactiveLink
+                      isActive ? styles.activeLink : styles.inactiveLink
                 }
             >
                 About
@@ -53,7 +62,7 @@ function NavMenu () {
                 to = "/favorites"
                 end
                 className={({ isActive }) =>
-                    isActive ? styles.activeLink : styles.inactiveLink
+                     `${isActive ? styles.activeLink : styles.inactiveLink} ${animation ? styles.pulse : ""}`
                 }
             >
                 Избранное

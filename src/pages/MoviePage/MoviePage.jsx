@@ -1,18 +1,22 @@
 import { useParams } from "react-router";
-import { useGetMovieByIdQuery } from "../../api/moviesApi";
+import { useGetMovieByIdQuery } from "@api/moviesApi";
 import styles from "./MoviePage.module.css";
-import MyButton from "../../components/ui/myButton/MyButton";
-import { useDispatch } from "react-redux";
-import { addFavorites } from "../../Features/Favorites/favoritesSlice";
+import MyButton from "@ui/myButton/MyButton";
+import { useDispatch, useSelector } from "react-redux";
+import { addFavorites, removeFavorites } from "@features/Favorites/favoritesSlice";
 
 function MoviePage () {
     const id = useParams().movieID;
     const { data, isLoading } = useGetMovieByIdQuery(id);
     const genres = (data?.genres || []).map(genre => genre.name).join(", ") || "";
     const dispatch = useDispatch();
+    const favorites = useSelector((state)=>state.favorites);
+    const movieInFavorites = favorites?.some(movie => movie.id  === data?.id);
+  
 
     function newFavorites (data) {
-        dispatch(addFavorites(data));
+       
+        movieInFavorites ? dispatch(removeFavorites(data.id)) : dispatch(addFavorites(data));
     }
     
     return <>
@@ -32,7 +36,9 @@ function MoviePage () {
                   <p className={styles.movieText}>Рейтинг: {data.vote_average.toFixed(1)}</p>
                   <p className={styles.movieText}>{data.release_date.slice(0, 4)} {genres}</p>
                   <div className={styles.movieTextButtons}>
-                      <MyButton className={styles.favBtn} onClick={()=>newFavorites(data)}>В избранное</MyButton>
+                      <MyButton className={styles.favBtn} onClick={()=>newFavorites(data)}>
+                        {movieInFavorites ? "Удалить из избранного" : "Добавить в избранное"}
+                        </MyButton>
                   </div>
         </div>
       </div>

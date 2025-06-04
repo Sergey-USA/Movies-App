@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { moviesApi } from "./api/moviesApi";
-import authReducer from "./Features/Auth/authSlice";
-import bgrReducer from "./Features/Background/bgrImgSlice";
-import favoriteReducer from "./Features/Favorites/favoritesSlice"
+import authReducer from "@features/Auth/authSlice";
+import bgrReducer from "@features/Background/bgrImgSlice";
+import favoriteReducer from "@features/Favorites/favoritesSlice"
 
 export const store = configureStore(
     {

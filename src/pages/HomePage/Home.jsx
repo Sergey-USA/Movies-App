@@ -1,12 +1,12 @@
 import { useGetMovieNowQuery, useGetMovieTopQuery, useGetPopularMoviesQuery } from "../../api/moviesApi";
-import MovieList from "../../components/movieList/MovieList"
+import MovieList from "@components/movieList/MovieList"
 import styles from "./Home.module.css"
 import { useSelector } from "react-redux";
 import { useState } from "react";
-import FilterWindow from "../../components/filterWindow/FilterWindow";
-import SearchButton from "../../components/ui/searchButton/SearchButton";
-import FilterButton from "../../components/ui/filterButton/FilterButton";
-import AISearchButton from "../../components/ui/aISearchButton/AISearchButton";
+import FilterWindow from "@components/filterWindow/FilterWindow";
+import SearchButton from "@ui/searchButton/SearchButton";
+import FilterButton from "@ui/filterButton/FilterButton";
+import AISearchButton from "@ui/aISearchButton/AISearchButton";
 
 
 function Home() {
