@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "@features/Auth/authSlice";
 import { useEffect, useState } from "react";
 
-function NavMenu () {
+const NavMenu = () => {
     const isAuth = useSelector((state)=>state.auth.isAuth)
     const favorites = useSelector((state) => state.favorites);
     const dispatch = useDispatch();
@@ -14,7 +14,8 @@ function NavMenu () {
 
     useEffect(()=>{
         setAnimation(true);
-        setTimeout(() => setAnimation(false), 500);
+        const timeout = setTimeout(() => setAnimation(false), 500);
+        return () => clearTimeout(timeout);
     },[favorites])
     
     return (

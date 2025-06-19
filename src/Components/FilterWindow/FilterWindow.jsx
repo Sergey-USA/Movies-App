@@ -6,19 +6,25 @@ import { useGetGenresQuery } from '@api/moviesApi';
 import MyButton from '@ui/myButton/MyButton';
 import { useNavigate } from 'react-router';
 
-export default function FilterWindow({setIsModal}) {
+const FilterWindow = ({setIsModal}) => {
 
      const {data: genres,  isLoading: genresIsLoading} = useGetGenresQuery ();
         let navigate = useNavigate();    
         const [movieYear, setMovieYear] = useState("");
         const [movieRating, setMovieRating] = useState("");
         const [selectedGenre, setSelectedGenre] = useState("");
+
+        const filterBtnClick = () => {
+            navigate(`/filteredPage?year=${movieYear}&rating=${movieRating}&genre=${selectedGenre}`);
+          }
+
+
   return (
     <>
      <ModalWindow 
                 setIsModal={setIsModal}
              >
-                   <h2>Фильм по  параметрам - </h2>
+                   <h1>Фильм по  параметрам - </h1>
                     <MyInput className={styles.filterInput} value={movieYear} placeholder="Год выхода" onChange={(e)=>setMovieYear(e.target.value)}/>
                     <MyInput  className={styles.filterInput} value={movieRating} placeholder="Минимальный рейтинг" onChange={(e)=>setMovieRating(e.target.value)}/>
                     
@@ -29,12 +35,11 @@ export default function FilterWindow({setIsModal}) {
                         </select>
                     <MyButton 
                     className = {styles.filterBtn}
-                     onClick={() => {
-                        console.log(`${movieYear} ${movieRating} ${selectedGenre}`);
-                        navigate(`/filteredPage?year=${movieYear}&rating=${movieRating}&genre=${selectedGenre}`);
-                      }}
+                     onClick={filterBtnClick}
                         >Искать</MyButton>
     </ModalWindow>
     </>
   )
 }
+
+export default FilterWindow;

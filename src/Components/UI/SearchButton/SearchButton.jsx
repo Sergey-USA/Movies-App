@@ -1,12 +1,15 @@
 import { useNavigate } from "react-router"
 import styles from "./searchButton.module.css"
 
-export default function SearchButton() {
+const SearchButton = () => {
   const navigate = useNavigate();
+  const openSearchPage = () => {
+    navigate("/search");
+  }
   return (
     <button 
                 className={styles.searchBtn}
-                onClick = {()=> navigate("/search")}
+                onClick = {openSearchPage}
              >
                 <svg 
                     xmlns="http://www.w3.org/2000/svg" 
@@ -25,3 +28,5 @@ export default function SearchButton() {
     </button>
   )
 }
+
+export default SearchButton;

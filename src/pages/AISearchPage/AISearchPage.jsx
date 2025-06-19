@@ -8,7 +8,7 @@ import MyButton from "@ui/myButton/MyButton";
 import { useGetMovieByNameQuery } from "@api/moviesApi";
 import MovieList from "@components/movieList/MovieList";
 
-export default function AISearchPage() {
+const AISearchPage = () => {
 
 const bgrPath = useSelector((state)=>state.bgrImg.bgrPath);
 
@@ -28,7 +28,7 @@ const submitBtn = async () => {
     try {
         const aiMovie = await fetchMovieName(apiKey, userQuery);
         setMovies(aiMovie);
-    
+         
     } catch (err) {alert(err)}
 
 }
@@ -39,12 +39,12 @@ const submitBtn = async () => {
       <div className={styles.searchContainer} style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${bgrPath}`}}>
         <div className={styles.formWrapper}>
         <div className={styles.formContainer}>
-            <h2>Поиск с AI meta-llama/llama-4-scout:free - </h2>
-            <h5>Я помогу найти фильм который наиболее подходит под описание, но для этого мне нужен APIKey openrouter.ai</h5>
-            <h5>!!! Используйте ключ чистого аккаунта без привязанных платежных данных. Не используй ключ с платежными данными!!! модель хоть и пока бесплатна, но в будущем может измениться</h5>
+            <h1>Поиск с AI meta-llama/llama-4-scout:free - </h1>
+            <p>Я помогу найти фильм который наиболее подходит под описание, но для этого мне нужен APIKey openrouter.ai</p>
+            <p>!!! Используйте ключ чистого аккаунта без привязанных платежных данных. Не используй ключ с платежными данными!!! модель хоть и пока бесплатна, но в будущем может измениться</p>
 
             <MyInput className={styles.AIInput} value={apiKey} placeholder="Введите API Key" onChange={(e)=>setApiKey(e.target.value)}/>
-            <h5>Введите описание фильма, который нужно найти</h5>
+            <p>Введите описание фильма, который нужно найти</p>
                 
             <textarea className={styles.AIInput} value={userQuery} placeholder="Описание фильма" onChange={(e)=>setUserQuery(e.target.value)}></textarea>
             
@@ -65,3 +65,6 @@ const submitBtn = async () => {
     </div>
   )
 }
+
+
+export default AISearchPage;

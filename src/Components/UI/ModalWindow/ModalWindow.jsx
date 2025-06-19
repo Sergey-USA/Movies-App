@@ -1,8 +1,12 @@
 import styles from "./ModalWindow.module.css"
 
-export default function ModalWindow({children, setIsModal, ...props}) {
+const ModalWindow = ({children, setIsModal, ...props}) => {
+
+  const closeFilterModal = () => {
+    setIsModal(false);
+  }
   return (
-    <div  className={styles.modalWindow} onClick={()=>setIsModal(false)}>
+    <div  className={styles.modalWindow} onClick={closeFilterModal}>
         <div {...props} className={styles.modalContainer} onClick={(e) => e.stopPropagation()}>
          {children}
         </div>
@@ -10,3 +14,5 @@ export default function ModalWindow({children, setIsModal, ...props}) {
     </div>
   )
 }
+
+export default ModalWindow

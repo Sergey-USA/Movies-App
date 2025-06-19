@@ -3,7 +3,7 @@ import MovieCard from '../movieCard/MovieCard'
 import styles from "./MovieList.module.css"
 
 
-export default function MovieList({movies, title}) {
+const MovieList = ({movies, title}) => {
 
   const movieListRef = useRef(null);
 
@@ -30,3 +30,5 @@ export default function MovieList({movies, title}) {
    
   )
 }
+
+export default MovieList;

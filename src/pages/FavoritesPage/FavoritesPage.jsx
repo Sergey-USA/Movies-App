@@ -2,7 +2,7 @@ import styles from "./FavoritesPage.module.css"
 import MovieList from '@components/movieList/MovieList';
 import { useSelector } from 'react-redux';
 
-export default function FavoritesPage() {
+const FavoritesPage = () => {
 
  const favorites = useSelector((state)=>state.favorites);
  const bgrPath = useSelector((state)=>state.bgrImg.bgrPath);
@@ -13,3 +13,5 @@ export default function FavoritesPage() {
     </div>
   )
 }
+
+export default FavoritesPage;

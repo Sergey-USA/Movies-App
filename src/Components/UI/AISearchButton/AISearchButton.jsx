@@ -1,13 +1,17 @@
 import { useNavigate } from "react-router"
 import styles from "./AISearchButton.module.css"
 
-export default function AISearchButton() {
+const AISearchButton = () => {
+
+  const openAIPage = ()=> {
+    navigate("/AISearch");
+  }
 
   const navigate = useNavigate();
   return (
      <button 
         className={styles.AISearchBtn}
-        onClick = {()=> navigate("/AISearch")}
+        onClick = {openAIPage}
     >
     
     <svg
@@ -32,3 +36,5 @@ export default function AISearchButton() {
     </button>
   )
 }
+
+export default AISearchButton;

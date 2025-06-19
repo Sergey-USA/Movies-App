@@ -4,12 +4,24 @@ import MyInput from "@ui/myInput/MyInput";
 import styles from "./searchPage.module.css";
 import MovieList from "@components/movieList/MovieList";
 import { useSelector } from "react-redux";
+import { debounce } from "lodash";
 
-function SearchPage () {
+const SearchPage = () => {
+ const [searchInput, setSearchInput] = useState("");
  const [searchQuery, setSearchQuery] = useState('');
+
  const {data: searcedMovies, isLoading: searcedIsLoading} = useGetMovieByNameQuery (searchQuery);
  const bgrPath = useSelector((state)=>state.bgrImg.bgrPath);
  
+ const searchMovie = debounce((value) => {
+        setSearchQuery(value);
+    }, 1500);
+
+ const handleChange = (e) => {
+    setSearchInput(e.target.value);
+    searchMovie(e.target.value);
+ };
+
     return (
         <div 
             className={styles.searchContainer} 
@@ -19,8 +31,8 @@ function SearchPage () {
             <MyInput 
                 className={styles.searchInput}
                 placeholder = "Найти"
-                value = {searchQuery}
-                onChange = {(e)=>setSearchQuery(e.target.value)}
+                value = {searchInput}
+                onChange = {handleChange}
             ></MyInput>
          </div>
             <div>

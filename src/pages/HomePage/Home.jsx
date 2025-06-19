@@ -9,7 +9,7 @@ import FilterButton from "@ui/filterButton/FilterButton";
 import AISearchButton from "@ui/aISearchButton/AISearchButton";
 
 
-function Home() {
+const Home = () => {
     const bgrPath = useSelector((state)=>state.bgrImg.bgrPath);
     const [isModal, setIsModal] = useState(false);
 

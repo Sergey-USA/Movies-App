@@ -4,7 +4,7 @@ import { login } from "@features/Auth/authSlice";
 import MyInput from "@ui/myInput/MyInput";
 import MyButton from "@ui/myButton/MyButton";
 
-function LoginPage () {
+const LoginPage = () => {
     const dispatch = useDispatch();
      
     return (

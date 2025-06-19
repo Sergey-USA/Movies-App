@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router';
 import { useGetMovieByFilterQuery } from '@api/moviesApi';
 import { useSelector } from 'react-redux';
 
-export default function FilteredPage() {
+const FilteredPage = () => {
 
 const [filterParams] = useSearchParams();
 const year = filterParams.get("year");
@@ -25,3 +25,5 @@ return (
     </div>
   )
 }
+
+export default FilteredPage;

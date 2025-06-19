@@ -1,9 +1,11 @@
 import styles from "./ErrorPage.module.css"
 
-export default function ErrorPage() {
+const ErrorPage = () => {
   return (
     <div className={styles.errorContainer}>
       <h1>Ошибка 404</h1>
     </div>
   )
 }
+
+export default ErrorPage;

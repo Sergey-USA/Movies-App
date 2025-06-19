@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export function useAIApi() {
+export const useAIApi = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
 
@@ -34,7 +34,7 @@ export function useAIApi() {
             }
             )
             const data = await res.json();
-            return data.choices?.[0]?.message?.content || "Неизвестно";
+            return data.choices?.[0]?.message?.content || null;
             
         } catch (err) {
             setError("Ошибка при запросе из AiAPI")

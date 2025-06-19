@@ -5,9 +5,9 @@ import { privateRoutes, publicRoutes } from './routes'
 import { useSelector } from 'react-redux'
 import NavMenu from '@components/navMenu/NavMenu'
 
-function App() {
+const App = () => {
   const isAuth = useSelector((state)=>state.auth.isAuth)
-  console.log("sdfsdf") //Он тут для ESLint
+  console.log("sdfsdf") //Он тут для ESLint - в коде консолей быть не должно
 
   return (
     <div className='App'>

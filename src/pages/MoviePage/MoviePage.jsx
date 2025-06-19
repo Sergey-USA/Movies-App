@@ -5,7 +5,7 @@ import MyButton from "@ui/myButton/MyButton";
 import { useDispatch, useSelector } from "react-redux";
 import { addFavorites, removeFavorites } from "@features/Favorites/favoritesSlice";
 
-function MoviePage () {
+const MoviePage = () => {
     const id = useParams().movieID;
     const { data, isLoading } = useGetMovieByIdQuery(id);
     const genres = (data?.genres || []).map(genre => genre.name).join(", ") || "";
@@ -14,9 +14,14 @@ function MoviePage () {
     const movieInFavorites = favorites?.some(movie => movie.id  === data?.id);
   
 
-    function newFavorites (data) {
+    const newFavorites = (data) => {
        
-        movieInFavorites ? dispatch(removeFavorites(data.id)) : dispatch(addFavorites(data));
+        // movieInFavorites ? dispatch(removeFavorites(data.id)) : dispatch(addFavorites(data));
+        if (movieInFavorites) {
+          dispatch(removeFavorites(data.id))
+        } else {
+          dispatch(addFavorites(data));
+        }
     }
     
     return <>
@@ -32,7 +37,7 @@ function MoviePage () {
                   <img className={styles.movieImage} src={`https://image.tmdb.org/t/p/w200${data.poster_path}`} alt={data.title} />
               </div>
               <div className={styles.movieTextCard}>
-                  <h3 className={styles.movieTitle}>{data.title}</h3>
+                  <h1 className={styles.movieTitle}>{data.title}</h1>
                   <p className={styles.movieText}>Рейтинг: {data.vote_average.toFixed(1)}</p>
                   <p className={styles.movieText}>{data.release_date.slice(0, 4)} {genres}</p>
                   <div className={styles.movieTextButtons}>

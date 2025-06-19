@@ -1,4 +1,4 @@
-function MyInput (props) {
+const MyInput = (props) => {
     
     return (
         <>
